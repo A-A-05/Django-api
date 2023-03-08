@@ -83,6 +83,7 @@ class CreateRestaurantView(generics.ListCreateAPIView):
             )
 
 
+# Customer useful views
 class RestaurantListView(generics.ListAPIView):
     queryset = models.Restaurant.objects.distinct()
     serializer_class = serializers.RestaurantSerializer
@@ -266,6 +267,7 @@ class PlaceOrderView(generics.ListAPIView):
             )
 
 
+# Restaurant Useful views
 class RestaurantSpecificOrdersView(generics.ListAPIView):
     queryset = models.Orders.objects.all()
     serializer_class = serializers.OrderitemSerializer
